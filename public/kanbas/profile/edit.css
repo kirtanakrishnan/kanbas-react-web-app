@@ -218,7 +218,7 @@
 }
 
 .container-link {
-    left: 20px;
+    margin-left: 20px;
     width: 500px;
     position: absolute;
 }
@@ -244,9 +244,9 @@
 }
 
 .container-input {
-    left: 0px;
+    margin-left: 20px;
     width: 500px;
-    position: relative;
+    position: absolute;
 }
 .col-sm-2 {
     width: 20px;
