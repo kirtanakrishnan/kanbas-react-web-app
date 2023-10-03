@@ -1,0 +1,152 @@
+.nu {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    left: 5px;
+    position: absolute;
+    
+  }
+  
+  .row {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  }
+  
+  .col-md-2 {
+      height: 100%
+  }
+  .sidebar {
+      width: 85px; 
+      background-color: black; 
+      color: white; 
+      height: 100%; 
+      top: 0;
+      left: 0; 
+      bottom: 0;
+      position: fixed;
+     
+  }
+  
+  /*.list-group-item-action a{
+      color: red;
+      background-color: white;
+      width: 80px; 
+  }*/
+  
+  .list-group-kanbas .list-group-item:hover a {
+      background-color: #f5f5f5;
+      color: red;
+      
+  }
+  
+  
+  .list-group {
+      position:absolute;
+      left:0;
+      top: 80px;
+      width: 80px;
+  }
+  
+  /*li a:active {
+      background-color: white; 
+      color: red; 
+  }*/
+  
+  .list-group-item {
+      width: 80px; 
+      background-color: black; 
+      color: white;
+      text-align: center;
+      left: 0;
+      margin: 5px;
+      padding: 5px;
+      border: none;
+  }
+  
+  .sidebar a {
+      
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+  
+     
+  }
+
+  /*dashboard css */
+
+  .row-title {
+      left: 100px;
+      width: 100%;
+      margin-top: 20px;
+      font-size: 45px;
+      font-weight: 200;
+  }
+
+  .dashboard {
+      width: 92%;
+      margin-top: 5px;
+  }
+
+  .published {
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 30px;
+  }
+
+  .published-line {
+      margin-left: 30px;
+      width: 90%
+  }
+
+  .row-dashboard {
+      left: 100px; 
+      width: 100%;
+      margin-top: 195px;
+      margin-bottom:300px;
+      
+  }
+
+  .row-dashboard .col-12 {
+      margin-left: 30px;
+      width: 260px;
+      margin-bottom: 30px;
+      margin-right: 30px;
+  }
+
+  .row2-dashboard {
+    left: 100px; 
+    width: 100%;
+    margin-top: 570px;
+    
+}
+
+.row2-dashboard .col-12 {
+    margin-left: 30px;
+    width: 260px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.go-to-home {
+    background-color:lightgray;
+    border:none;
+    margin-left:100px;
+}
+
+.list-group-item.active a{
+    background-color: white;
+    color: red;
+   
+  }
+  
+  .list-group-item.active {
+      background-color:white;
+  }
+
+
+
+
+  

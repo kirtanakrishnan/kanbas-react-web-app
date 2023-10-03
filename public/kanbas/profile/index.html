@@ -2,13 +2,157 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>Edit Profile</title>
+   <title>Profile</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
 </head>
+<link href="index.css"
+         rel="stylesheet"/>
 <body>
-    <table >
-        <tbody>
-            <tr><td valign="top">
-                <ul>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-2 col-lg-2 col-sm-0 col-xl-5 col-xxl-5 sidebar">
+              
+                 <img class="nu mx-auto" src="nu.png" width="75px" height="70px"/>
+  
+                <div class="list-group list-group-flush list-group-kanbas">
+  
+                    <li class="list-group-item list-group-item-action active">
+                        <a href="../profileNavigation.html"><i class="fa-solid fa-user fa-xl" style="color: #d3d5d9;"></i></a><br>
+                            <a href="../profileNavigation.html " class = "acc">Account</a></li>
+        
+     
+                    <li class="list-group-item list-group-item-action ">
+                        <a href="../dashboard.html"><i class="fa-solid fa-gauge-high fa-xl" style="color: #e61414;"></i></a>
+                        <br>
+                        <a href="../dashboard.html" >Dashboard</a></li>
+     
+                    <li class="list-group-item list-group-item-action">
+                        <a href="../kanbasNavigation.html"> <i class="fa-solid fa-book fa-xl" style="color: #e61414;"></i></a>
+                       <br>
+                        <a href="../kanbasNavigation.html">Courses</a></li>
+     
+                    <li class="list-group-item list-group-item-action">
+                        <a href="#"><i class="fa-solid fa-calendar-days fa-xl" style="color: #e61414;"></i></a>
+                        <br>
+                        <a href="#" >Calendar</a></li>
+     
+                    <li class="list-group-item list-group-item-action">
+                     <a href="#"><i class="fa-solid fa-inbox fa-xl" style="color: #e61414;"></i></a>
+                       <br>
+                        <a href="#" >Inbox</a></li> 
+     
+                    <li class="list-group-item list-group-item-action">
+                        <a href="#"> <i class="fa-regular fa-clock fa-xl" style="color: #e61414;"></i></a>
+                       <br>
+                        <a href="#" >History</a></li> 
+     
+                    <li class="list-group-item list-group-item-action">
+                        <a href="#"><i class="fa-solid fa-tv fa-xl" style="color: #e61414;"></i></a>
+                        <br>
+                        <a href="#" >Studio</a></li> 
+     
+                    <li class="list-group-item list-group-item-action">
+                        <a href="#"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: #e61414;"></i></a>
+                        
+                     <br>
+                        <a href="#" >Commons</a></li> 
+     
+                    <li class="list-group-item list-group-item-action">
+                        <a href="#"><i class="fa-regular fa-circle-question fa-xl" style="color: #e61414;"></i></a>
+                        <br>
+                        <a href="#" >Help</a></li> 
+    
+                </div>
+            </div>
+
+
+            <div class = "col-md-2 col-lg-2 col-sm-0 col-xl-5 col-xxl-5 sidebar-profile">
+                  
+                    <div class="list-group list-group-flush list-group-profile">
+                       <li class="list-group-item list-group-item-action"><a href="#">Notifications</a></li>
+                       <li class="list-group-item list-group-item-action"><a href="index.html">Profile</a></li>
+                       <li class="list-group-item list-group-item-action"><a href="#">Files</a></li>
+                       <li class="list-group-item list-group-item-action"><a href="#">Settings</a></li>
+                       <li class="list-group-item list-group-item-action"><a href="#">ePortfolios</a></li> 
+                       <li class="list-group-item list-group-item-action"><a href="#">Shared Content</a></li> 
+                       <li class="list-group-item list-group-item-action"><a href="#">The Hub</a></li> 
+                       <li class="list-group-item list-group-item-action"><a href="#">Qwickly Course Tools</a></li> 
+                       <li class="list-group-item list-group-item-action"><a href="#">Global Announcements</a></li> 
+  
+  
+                    </div>
+  
+            </div>
+
+
+        
+
+            <div class="col-md-2 col-lg-2 col-sm-0 col-xl-5 col-xxl-5 profile-body">
+                <p class = "underline-text profile-text heading">
+    
+                    Jose Annunziato's Profile
+                    
+                </p>
+                
+               
+                    <div class="container profile-text">
+                        <div class="float-start"> <i class="fa-solid fa-user fa-2xl account" style="color: #d3d5d9;"></i>
+                        </div>
+                        <div class="float-end">  
+                            <a href="edit.html">
+                                <button type="button" class="btn edit-profile ">Edit Profile</button>
+                            </a> 
+                            
+                        </div>
+                    </div>
+
+                    
+                <p class="profile-text name">
+                    Jose Annunziato
+                </p>
+
+                    
+                <p class="profile-text sub">
+                    Contact
+                </p>
+
+                <p class="profile-text sub-sub">
+                    No registered services, you can add some on the <a href="edit.html" class="profile-link">settings</a> page.
+                </p>
+                
+                <p class="profile-text sub">
+                Biography
+                </p>
+
+                <p class="profile-text sub-sub">
+                    No registered services, you can add some on the <a href="edit.html" class="profile-link">settings</a> page.
+                </p>
+
+                <p class="profile-text sub">
+                Links
+               
+                </p>
+
+                <p class="profile-text">
+                    <i class="fa-solid fa-link" style="color: #a9abad;"></i>
+                    <a href="https://youtu.be/BumwDcj5Y8k?si=1_ukSSpH6mT5Y17p" class="profile-link">YouTube </a>
+                </p>
+            
+
+                </p>
+               
+            </div>
+
+
+
+        </div>
+  
+    </div>
+
+   
+                <!--ul>
                     <li><a href="../profileNavigation.html">Account</a></li>
                     <li><a href="#">Dashboard</a></li>
                     <li><a href="../kanbasNavigation.html">Courses</a></li>
@@ -19,8 +163,8 @@
                     <li><a href="#">Commons</a></li> 
                     <li><a href="#">Help</a></li> 
                 </ul>
-            </td>
-            <td valign="top">
+          
+           
                 <ul>
                    <li><a href="#">Notifications</a></li>
                    <li><a href="index.html">Profile</a></li>
@@ -31,28 +175,15 @@
                    <li><a href="#">The Hub</a></li> 
                    <li><a href="#">Qwickly Course Tools</a></li> 
                    <li><a href="#">Global Announcements</a></li> 
-               </ul>
-              </td>
-            <td>
-                Jose Annunziato's Profile
-                <hr></br></br>
-                <font size="+3">Jose Annunziato</font> 
-                <a href="edit.html"><button>Edit Profile</button></a> </br></br></br>
+               </ul!-->
+             
 
-                <font size="+2">Contact</font> </br></br>
-                No registered services, you can add some on the <a href="edit.html">settings</a> page.
-
-                </br></br></br><font size="+2">Biography</font> </br></br>
-                No registered services, you can add some on the <a href="edit.html">settings</a> page.
-
-                </br></br></br><font size="+2">Links</font> </br></br>
-                <a href="#">Youtube </a>
+    
+                
                
             
-            </td>
-            </tr>
-        </tbody>
-    </table>
+          
+            
     
     
 </body>

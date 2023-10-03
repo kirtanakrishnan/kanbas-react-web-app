@@ -1,0 +1,573 @@
+.nu {
+    display: blool-k;
+    margin: 5px;
+    padding: 5px;
+    left: 5px;
+    position: absolute;
+    
+  }
+  
+  .row {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  }
+  
+  .col-md-2 {
+      height: 100%
+  }
+  .sidebar {
+      width: 85px; 
+      background-color: black; 
+      color: white; 
+      height: 100%; 
+      top: 0;
+      left: 0; 
+      bottom: 0;
+      position: fixed;
+     
+  }
+  
+  /*.list-group-item-action a{
+      color: red;
+      background-color: white;
+      width: 80px; 
+  }*/
+  
+  .list-group-kanbas .list-group-item:hover a {
+      background-color: #f5f5f5;
+      color: red;
+      
+  }
+  
+  
+  .list-group {
+      position:absolute;
+      left:0;
+      top: 80px;
+      width: 80px;
+  }
+  
+  /*li a:active {
+      background-color: white; 
+      color: red; 
+  }*/
+  
+  .list-group-item {
+      width: 80px; 
+      background-color: black; 
+      color: white;
+      text-align: center;
+      left: 0;
+      margin: 5px;
+      padding: 5px;
+      border: none;
+  }
+  
+  .sidebar a {
+      
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+  
+     
+  }
+
+  /*kanbas nav css*/
+
+  
+  .sidebar-profile {
+      width: 195px;
+      
+  }
+
+  .d-lg-block {
+      left:0px;
+      position:absolute;
+  }
+
+  .head {
+      margin-left:450px;
+      position:absolute;
+     
+  }
+
+  .sidebar-profile a {
+    left: 100px;
+    color: red;
+    text-decoration: none;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    
+    
+}
+
+
+.list-group-profile {
+    width: 195px;
+    left: 100px;
+    position: absolute;
+    background-color: white;
+    
+    
+}
+
+.list-group-profile .list-group-item {
+    background-color: white;
+    width: 195px;
+    text-align: left;
+    
+    
+}
+
+.list-group-profile .list-group-item:hover a {
+  color: black;
+  width: 195px;
+  text-align: left;
+  border-left: 2px solid black;
+  padding-left: 8px;
+  
+}
+
+.list-group-item.active {
+  background-color: white;
+  color: red;
+ 
+}
+
+.fa-eye-slash {
+    margin-left: 15px;
+}
+
+
+/*main css*/
+
+.custom-breadcrumb li {
+    color: red;
+    margin-left: 100px;
+    width: 600px;
+    margin-bottom: 5px;
+   
+    
+}
+
+.custom-breadcrumb {
+    width: 150px;
+    margin-bottom: 5px;
+    
+}
+.breadcrumb {
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+.class {
+    color: red;
+    margin: 0;
+    padding-bottom: 10px;
+    width: 600px;
+    position: absolute;
+}
+
+
+.main-home {
+    margin-left: 100px;
+    width: 750px;
+  
+    
+    
+}
+
+.group {
+    background-color: lightgrey;
+    margin-right: 5px;
+    width: 110px;
+    margin-top: none;
+    
+}
+
+.home-select {
+    width: 200px;
+    /*margin-right: 40px;*/
+    background-color: lightgray;
+    margin-left: 0px;
+    margin-right: 0px;
+   
+}
+
+.head-line {
+    margin-top: 120px;
+    width: 745px;
+    
+    position:absolute;
+}
+
+.module {
+    background-color: red;
+    color: white;
+    margin: 5px;
+}
+
+.ellipse {
+    background-color: lightgray;
+    height: 38px;
+   
+}
+
+
+
+.list-group-course {
+    margin-left: 300px;
+    margin-top: 80px;
+    padding-bottom: 10px;
+    
+}
+
+.list-group-course .list-group-item {
+    width: 750px;
+    margin: 0px;
+    background-color: white;
+    color: black;
+    border-left: 3px solid green;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    padding: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.list-group-course .list-group-item-secondary {
+    background-color: lightgray;
+    border-left: 1px solid lightgray;
+    text-align: left;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 15px;
+   
+  }
+
+  .list-group-item.sub-item{
+    padding-left: 60px;
+  }
+
+  .list-group-item.sub-link a{
+      color: red;
+      text-decoration: none;
+      padding-left: 60px;
+  }
+  .list-group-item.sub-item i{
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+
+  .fa-circle-check {
+    padding-right: 5px;
+  }
+
+  .fa-plus {
+      padding-right: 5px;
+      
+  }
+
+  .fa-eye-slash {
+      padding-right: 35px;
+  }
+
+  .main-home .head {
+      margin-top: 50px;
+     
+  }
+
+  
+
+  .side {
+    left: 1100px;
+    width: 200px;
+    position:absolute;
+    
+}
+
+.status {
+    margin-top: 65px;
+}
+  
+.col-button {
+    width: 500px;
+    margin-top: 12px;
+}
+
+.unpublish {
+    background-color: lightgray;
+}
+
+.published {
+    background-color: seagreen;
+    color: white;
+}
+
+.fa-ban {
+    margin-right: 5px;
+}
+
+.button-group {
+    margin-top: 35px;
+}
+
+.button-group .btn {
+    margin-bottom: 5px;
+    width: 250px;
+    text-align: left;
+    
+    
+}
+
+.button-group .btn a {
+    text-decoration: none;
+    color: black;
+   
+}
+
+.button-group .btn i {
+    margin-right: 5px;
+   
+    
+}
+
+.todo {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.todo-line {
+    width: 260px;
+}
+
+.todo-sub {
+    color: red;
+    font-weight: 400;
+}
+
+.coming-up {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+
+
+.main-line {
+   
+   margin-left: 100px;
+   width: 950px;
+   
+}
+
+.tasks {
+    
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.tasks a {
+    color: red;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.fa-bars {
+    margin-right: 10px;
+}
+
+.student {
+    margin-left: 570px;
+    width: 175px;
+    margin-top: 5px;
+    position: absolute;
+    background-color: lightgray;
+
+}
+
+.fa-glasses {
+    margin-right: 10px;
+}
+
+.total {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.head-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.assignment {
+    margin-right: 400px;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+}
+
+.search {
+    margin-top: 80px;
+    position: absolute;
+}
+
+.sub-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.first {
+    margin-top: 150px;
+}
+
+.points-input {
+    width: 350px;
+    margin-top: 30px;
+}
+
+.points {
+    margin-left: 150px;
+}
+
+.assignment-group {
+   margin-left: 60px;
+   margin-top: 100px;
+}
+
+.assignment-select {
+    width: 350px;
+    margin-top: 30px;
+}
+
+.display-grade {
+    margin-left: 75px;
+    margin-top: 220px;
+ }
+ 
+ .display-select {
+     width: 350px;
+     margin-top: 30px;
+ }
+
+ .submission-type {
+    margin-left: 75px;
+    margin-top: 345px;
+ }
+ 
+ .submission-select {
+     width: 350px;
+     margin-top: 30px;
+ }
+
+ .entry-options {
+     margin-top: 270px;
+     margin-left: 225px;
+ }
+
+
+ .submission-attempts{
+    margin-left: 80px;
+    margin-top: 780px;
+ }
+
+ .plagiarism-review {
+    margin-left: 80px;
+    margin-top: 840px;
+ }
+
+ .group-assignment {
+     margin-left: 220px;
+     margin-top: 150px;
+     position: absolute;
+ }
+
+ .peer-reviews {
+    margin-left: 220px;
+    margin-top: 220px;
+     position: absolute;
+}
+
+.assign-to {
+    margin-left: 80px;
+    margin-top: 1030px;
+    
+}
+
+.assign-input {
+    margin-top: 30px;
+}
+
+.due {
+    margin-left: 80px;
+    margin-top: 1170px;
+}
+
+.available-from {
+    margin-left: 80px;
+    margin-top: 1110px;
+}
+
+.until {
+    margin-left: 80px;
+    margin-top: 1230px;
+}
+
+.btn-link {
+    background-color: lightgray;
+    margin-top: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.row-save{
+    margin-left: 50px;
+    
+}
+
+.col-save{
+    padding-left: 10px;
+    
+}
+.container-save {
+    left: 0px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 300px;
+    position: relative;
+    
+}
+.btn-save {
+    width: 100px;
+    color: white;
+    background-color: red;
+    margin-top: 5px;
+    margin-bottom: 20px;
+ 
+}
+
+.bottom {
+    margin-top: 550px;
+}
+
+.head .btn {
+    margin-top: 10px;
+}
+
+.row {  
+    flex-wrap:nowrap; 
+}
+
+.list-group-item.active a{
+    background-color: white;
+    color: red;
+   
+  }
+  
+  .list-group-item.active {
+      background-color:white;
+  }

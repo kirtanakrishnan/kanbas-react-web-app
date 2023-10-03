@@ -3,13 +3,611 @@
 <head>
    <meta charset="UTF-8">
    <title>Assignments</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
 </head>
+<link href="index.css"
+         rel="stylesheet"/>
 <body>
-    <table>
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <ul>
+
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-md-2 sidebar">
+                <p>
+                    <img class="nu mx-auto" src="nu.png" width="75px" height="70px"/>
+
+                    <div class="list-group list-group-flush list-group-kanbas">
+
+                        <li class="list-group-item list-group-item-action ">
+                            <a href="../profileNavigation.html"><i class="fa-solid fa-user fa-xl" style="color: #d3d5d9;"></i></a><br>
+                                <a href="../profileNavigation.html " class = "acc">Account</a></li>
+            
+         
+                        <li class="list-group-item list-group-item-action ">
+                            <a href="../dashboard.html"><i class="fa-solid fa-gauge-high fa-xl" style="color: #e61414;"></i></a>
+                            <br>
+                            <a href="../dashboard.html" >Dashboard</a></li>
+         
+                        <li class="list-group-item list-group-item-action active">
+                            <a href="../kanbasNavigation.html"> <i class="fa-solid fa-book fa-xl" style="color: #e61414;"></i></a>
+                           <br>
+                            <a href="../kanbasNavigation.html">Courses</a></li>
+         
+                        <li class="list-group-item list-group-item-action">
+                            <a href="#"><i class="fa-solid fa-calendar-days fa-xl" style="color: #e61414;"></i></a>
+                            <br>
+                            <a href="#" >Calendar</a></li>
+         
+                        <li class="list-group-item list-group-item-action">
+                         <a href="#"><i class="fa-solid fa-inbox fa-xl" style="color: #e61414;"></i></a>
+                           <br>
+                            <a href="#" >Inbox</a></li> 
+         
+                        <li class="list-group-item list-group-item-action">
+                            <a href="#"> <i class="fa-regular fa-clock fa-xl" style="color: #e61414;"></i></a>
+                           <br>
+                            <a href="#" >History</a></li> 
+         
+                        <li class="list-group-item list-group-item-action">
+                            <a href="#"><i class="fa-solid fa-tv fa-xl" style="color: #e61414;"></i></a>
+                            <br>
+                            <a href="#" >Studio</a></li> 
+         
+                        <li class="list-group-item list-group-item-action">
+                            <a href="#"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: #e61414;"></i></a>
+                            
+                         <br>
+                            <a href="#" >Commons</a></li> 
+         
+                        <li class="list-group-item list-group-item-action">
+                            <a href="#"><i class="fa-regular fa-circle-question fa-xl" style="color: #e61414;"></i></a>
+                            <br>
+                            <a href="#" >Help</a></li> 
+    
+               
+
+
+                    </div>
+
+                   
+
+                    </p>
+               </div>
+            
+            
+            <!--Sidebar 2-->
+
+            <div class = "col-md-2 sidebar-profile ">
+                <p>
+                    <nav aria-label="breadcrumb" class="custom-breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item active" aria-current="page">
+                            
+                              <p class="class">
+                                <i class="fa-solid fa-bars fa-xl" style="color: #d12323;"></i>
+                                CS4550.01.02 > Assignments
+                                 </p>
+                            </p></li>
+                        </ol>
+                      </nav>
+
+                      <hr class="main-line">
+                      
+
+                  <div class="list-group list-group-flush list-group-profile">
+                     <li class="list-group-item list-group-item-action"><a href="../home.html">Home</a></li>
+                     <li class="list-group-item list-group-item-action"><a href="#">Modules</a></li>
+                     <li class="list-group-item list-group-item-action"><a href="#">Piazza</a></li>
+                     <li class="list-group-item list-group-item-action"><a href="#">Zoom Meetings</a></li>
+                     <li class="list-group-item list-group-item-action"><a href="index.html">Assignments</a></li> 
+                     <li class="list-group-item list-group-item-action"><a href="#">Quizzes</a></li> 
+                     <li class="list-group-item list-group-item-action"><a href="../grades.html">Grades</a></li> 
+                     <li class="list-group-item list-group-item-action"><a href="#">People</a></li> 
+                     <li class="list-group-item list-group-item-action"><a href="#">Panopoto Video</a></li> 
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Discussions</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                        
+                        </li>
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Announcements</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                      
+                    
+                    </li>
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Pages</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                        </li>
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Files</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                        </li>
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Rubrics</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                        </li>
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Outcomes</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                        </li>
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Collaborations</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                        </li>
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Syllabus</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                        </li>
+                     <li class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>  <a href="#">Settings</a> </span>
+                            <div>
+
+                                <i class="fa-regular fa-eye-slash" style="color: #1a1d23;"></i>
+
+                            </div>
+                            
+                        </div>
+                        </li>
+
+
+                  </div>
+                 
+                </p>
+
+            </div>
+
+
+             <!--Main column html -->
+            
+
+            
+            <div class = "col-md-2 col-lg-2 col-sm-0 col-xl-5 col-xxl-5 main-home flex-column">
+                <button type="button" class="btn student"><i class="fa-solid fa-glasses" style="color: #3e4147;"></i>Student View</button> 
+
+                <p>
+
+                    <div class="d-flex float-start align-items-center search">
+                        <textarea class="form-control assignment" placeholder="Search for Assignment" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea"></label>
+                    </div>
+                    
+                    
+                    <div class="d-flex float-end align-items-center head">
+                       
+                            <button type="button" class="btn group"><i class="fa-solid fa-plus" style="color: #484d56;"></i>Group</button>
+                            <button type="button" class="btn module"><i class="fa-solid fa-plus" style="color: white;"></i>Assignment</button>
+                            <button type="button" class="btn ellipse"> <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i></button>
+                       
+                    
+                    </div>
+
+                  
+
+                    <hr class="head-line">
+
+                  
+                    
+                    <ul class="list-group list-group-course">
+                        
+                            <li class="list-group-item list-group-item-secondary" aria-current="true">
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                       
+                                        <span> Assignments</span>
+                                    </div>
+                                    
+                                    <div class="head-container">
+
+                                    
+                                    <input type="email" class="form-control total" id="floatingInputDisabled" placeholder="40% of total" disabled>
+                                        
+                                    <i class="fa-solid fa-plus" style="color: #2c313a;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+
+                                    </div>
+                                    
+                                </div>
+                              
+                            </li>
+                            
+                    
+                        
+                        
+                       
+                        <li class="list-group-item sub-item">
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+                                    <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">A1 - ENV + HTML </a> </span> <br>
+                                    <text class="sub-text">Week 0</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+
+                                </div>
+                                
+                                
+                                
+                                <div>
+                                    <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                </div>
+                                
+                            </div>
+                            
+                           
+                        </li>
+
+                        <li class="list-group-item sub-item">
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+                                    <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">A2 - CSS + BOOTSTRAP  </a> </span><br>
+                                    <text class="sub-text">Week 1</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                </div>
+                                
+                                <div>
+                                    <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item sub-item">
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+                                    <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">A3 - JS + REACT  </a>  </span><br>
+                                    <text class="sub-text">Week 2</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                </div>
+                                
+                                <div>
+                                    <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                </div>
+                            </div></li>
+                        <li class="list-group-item sub-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">A4 - STATE + REDUX </a></span><br>
+                                    <text class="sub-text">Week 3</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                </div>
+                               
+                                <div>
+                                    <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                </div>
+                            </div>
+                            </li>
+                        <li class="list-group-item sub-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">A5 - NODE + SESSION </a></span><br>
+                                    <text class="sub-text">Week 4</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                </div>
+                                
+                                <div>
+                                    <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="list-group-item sub-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                        <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">A6 - MONGO + MONGOOSE </a> </span><br>
+                                    <text class="sub-text">Week 5</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                    
+                                    </div>
+                                   
+                                    <div>
+                                        <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                        <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                    </div>
+                                </div>
+                                </li>
+                        
+
+                         <li class="list-group-item list-group-item-secondary" aria-current="true">
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                        <span> Quizzes</span>
+                                    </div>
+                                   
+                                    <div class="head-container">
+
+                                    
+                                    <input type="email" class="form-control total" id="floatingInputDisabled" placeholder="10% of total" disabled>
+                                        
+                                    <i class="fa-solid fa-plus" style="color: #2c313a;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+
+                                    </div>
+                                    
+                                </div>
+                              
+                            </li>       
+                      
+                        
+                        
+                        <li class="list-group-item sub-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">Q1 - HTML </a> </span><br>
+                                    <text class="sub-text">Week 0</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                </div>
+                                
+                               
+                                <div>
+                                    <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                </div>
+                            </div></li>
+                        <li class="list-group-item sub-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">Q2 - CSS</a>  </span><br>
+                                    <text class="sub-text">Week 1</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                </div>
+                                
+                                <div>
+                                    <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                </div>
+                            </div>
+                            </li>
+                        <li class="list-group-item sub-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span> <a href="edit.html">Q3 - JS, ES6</a> </span><br>
+                                    <text class="sub-text">Week 2</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                </div>
+                               
+                                <div>
+                                    <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="list-group-item sub-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                    <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                    <span>  <a href="edit.html">Q4 - NODE</a> </span><br>
+                                    <text class="sub-text">Week 3</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+
+                                    </div>
+                                    
+                                    <div>
+                                        <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                        <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item sub-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                            <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                            <span> <a href="edit.html">Q5 - MONGO</a> </span><br>
+                                            <text class="sub-text">Week 4</text><br>
+                                            <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                        </div>
+                                        
+                                        <div>
+                                            <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                            <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            
+                                <li class="list-group-item list-group-item-secondary" aria-current="true">
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                            <span> Exams</span>
+                                            
+                                        </div>
+                                        
+                                        <div class="head-container">
+    
+                                        
+                                        <input type="email" class="form-control total" id="floatingInputDisabled" placeholder="20% of total" disabled>
+                                            
+                                        <i class="fa-solid fa-plus" style="color: #2c313a;"></i>
+                                        <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+    
+                                        </div>
+                                        
+                                    </div>
+                                  
+                                </li>       
+                          
+                            
+                            
+                            <li class="list-group-item sub-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                            <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                            <span> <a href="edit.html">Midterm</a>  </span>
+                                            <br>
+                                    <text class="sub-text">Week 0</text><br>
+                                    <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                    </div>
+                                  
+                                    <div>
+                                        <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                        <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                    </div>
+                                </div></li>
+                            <li class="list-group-item sub-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                            <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                            <span> <a href="edit.html">Final</a>  </span><br>
+                                            <text class="sub-text">Week 1</text><br>
+                                            <text class="sub-text">Due Dec 12 | 100 pts</text>
+                                    </div>
+                                    
+                                    <div>
+                                        <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                        <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                    </div>
+                                </div>
+                                </li>
+                            
+
+                            
+                                <li class="list-group-item list-group-item-secondary" aria-current="true">
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span> Projects</span>
+                                            
+                                            <div class="head-container">
+        
+                                            
+                                            <input type="email" class="form-control total" id="floatingInputDisabled" placeholder="30% of total" disabled>
+                                                
+                                            <i class="fa-solid fa-plus" style="color: #2c313a;"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+        
+                                            </div>
+                                            
+                                        </div>
+                                      
+                                    </li>       
+                              
+                                
+                                
+                                <li class="list-group-item sub-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-grip-vertical" style="color: #5a5d63;"></i>
+                                            <i class="fa-regular fa-file" style="color: #186825;"></i>
+                                            <span> <a href="edit.html">Project</a> </span>
+                                        </div>
+                                       
+                                        <div>
+                                            <i class="fa-solid fa-circle-check" style="color: #067a23;"></i> 
+                                            <i class="fa-solid fa-ellipsis-vertical" style="color: #989aa0;"></i>
+                                        </div>
+                                    </div></li>
+                              
+                                    
+                        
+
+                  </div>
+                 
+                </p>
+
+             </div>
+
+
+           
+
+            
+            
+
+        </div>
+
+    </div>
+
+
+    
+                    <!--ul>
                         <li><a href="../profileNavigation.html">Account</a></li>
                         <li><a href="#">Dashboard</a></li>
                         <li><a href="../kanbasNavigation.html">Courses</a></li>
@@ -20,8 +618,7 @@
                         <li><a href="#">Commons</a></li> 
                         <li><a href="#">Help</a></li> 
                     </ul>
-                </td>
-                <td valign="top">
+                
                     <ul>
                         <li><a href="../home.html">Home</a></li>
                         <li><a href="#">Modules</a></li>
@@ -42,8 +639,7 @@
                         <li><a href="#">Syllabus</a></li> 
                         <li><a href="#">Settings</a></li> 
                    </ul>
-                </td>
-                <td>
+                
                     <input id="search-assignments" placeholder="Search for Assignments"/>
     <button type="button">Group</button>
     <button type="button">Assignment</button>
@@ -68,7 +664,7 @@
         <li><a href="edit.html">A3 - JS + REACT </br> Multiple Modules</a> | Not available</li>
         <li><a href="edit.html">A4 - STATE + REDUX </br> Multiple Modules</a> | Not available</li>
         <li><a href="edit.html">A5 - NODE + SESSION </br> Multiple Modules</a> | Not available</li> 
-        <li><a href="edit.html">A4 - MONGO + MONGOOSE </br> Multiple Modules</a> | Not available</li> 
+        <li><a href="edit.html">A6 - MONGO + MONGOOSE </br> Multiple Modules</a> | Not available</li> 
     </ul>
     <h2>QUIZZES 10% of Total</h2>
     <select>
@@ -116,10 +712,7 @@
     </select>
     <ul>
         <li><a href="edit.html">Project </br> Multiple Modules</a> | Not available</li>
-    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    </ul!-->
+               
 </body>
 </html>
