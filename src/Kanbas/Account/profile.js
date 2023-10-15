@@ -10,7 +10,7 @@ function Profile() {
         <div className="col-md-2 col-lg-2 col-sm-0 col-xl-5 col-xxl-5 profile-body">
             <AccountNavigation/>
             Hello
-          <p className="underline-text profile-text heading">Jose Annunziato's Profile</p>
+          {/* <p className="underline-text profile-text heading">Jose Annunziato's Profile</p>
 
           <div className="container profile-text">
             <div className="float-start">
@@ -42,7 +42,7 @@ function Profile() {
           <p className="profile-text">
             <FontAwesomeIcon icon={faLink} style={{ color: "#a9abad" }} />
             <a href="https://youtu.be/BumwDcj5Y8k?si=1_ukSSpH6mT5Y17p" className="profile-link">YouTube</a>
-          </p>
+          </p> */}
 
           
         </div>

@@ -4,7 +4,7 @@ const TodoList = () => {
  return(
    <>
      <h3>Todo List</h3>
-     <ul className="list-group">
+     <ul className="list-group todo-list">
        {
          todos.map(todo => {
            return(<TodoItem todo={todo}/>);
