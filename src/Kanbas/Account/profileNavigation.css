@@ -1,0 +1,134 @@
+
+
+.nu {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    left: 5px;
+    position: absolute;
+    
+  }
+  
+  .row {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  }
+  
+  .col-md-2 {
+      height: 100%
+  }
+  .sidebar {
+      width: 85px; 
+      background-color: black; 
+      color: white; 
+      height: 100%; 
+      top: 0;
+      left: 0; 
+      bottom: 0;
+      position: fixed;
+     
+  }
+  
+  .list-group-item-action {
+      color: red;
+      background-color: white;
+      width: 80px; 
+  }
+  
+  .list-group-item:hover {
+      background-color: #f5f5f5;
+      color: red;
+  }
+  
+  
+  .list-group {
+      position:absolute;
+      left:0;
+      top: 80px;
+      width: 80px;
+  }
+  
+  /*li a:active {
+      background-color: white; 
+      color: red; 
+  }*/
+  
+  .list-group-item {
+      width: 80px; 
+      background-color: black; 
+      color: white;
+      text-align: center;
+      left: 0;
+      margin: 5px;
+      padding: 5px;
+      text-align: center; 
+      border: none;
+  }
+
+
+.list-group-kanbas .list-group-item:hover a {
+    color: red;
+    background-color: white;
+}
+
+.list-group-kanbas .list-group-item .acc {
+    color: red;
+}
+  
+  .sidebar a {
+      
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+  
+     
+  }
+
+  /*profile nav css*/
+
+  .sidebar-profile a {
+      left: 100px;
+      color: red;
+      text-decoration: none;
+      font-size: 16px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      
+  }
+
+
+  .list-group-profile {
+      width: 195px;
+      left: 100px;
+      position: absolute;
+      background-color: white;
+      
+      
+  }
+
+  .list-group-profile .list-group-item {
+      background-color: white;
+      width: 195px;
+      text-align: left;
+  }
+
+  .list-group-profile .list-group-item:hover a {
+    color: black;
+    width: 195px;
+    text-align: left;
+    border-left: 2px solid black;
+    padding-left: 8px;
+    
+}
+
+.list-group-item.active {
+    background-color: white;
+    color: red;
+   
+}
+
+
+

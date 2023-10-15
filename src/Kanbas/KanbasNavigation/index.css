@@ -1,0 +1,91 @@
+
+.nu {
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  left: 5px;
+  position: absolute;
+  
+}
+
+.row {
+position: absolute;
+top: 0;
+bottom: 0;
+}
+
+.col-md-2 {
+    height: 100%
+}
+.sidebar {
+    width: 85px; 
+    background-color: black; 
+    color: white; 
+    height: 100%; 
+    top: 0;
+    left: 0; 
+    bottom: 0;
+    position: fixed;
+   
+}
+
+/*.list-group-item-action a{
+    color: red;
+    background-color: white;
+    width: 80px; 
+}*/
+
+.list-group-kanbas .list-group-item:hover a {
+    background-color: #f5f5f5;
+    color: red;
+    
+}
+
+
+.list-group {
+    position:absolute;
+    left:0;
+    top: 80px;
+    width: 80px;
+}
+
+/*li a:active {
+    background-color: white; 
+    color: red; 
+}*/
+
+.list-group-item {
+    width: 80px; 
+    background-color: black; 
+    color: white;
+    text-align: center;
+    left: 0;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+}
+
+.sidebar a {
+    
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+
+   
+}
+
+/* .list-group-item-link .text {
+    color: white;
+    
+  }
+  
+  .list-group-item-link:hover .text {
+    color: red;
+  } */
+
+  .list-group-kanbas .list-group-item.active .list-group-item-link {
+    color: red;
+    background-color: white;
+  }
