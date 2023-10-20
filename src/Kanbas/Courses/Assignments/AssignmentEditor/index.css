@@ -1,0 +1,39 @@
+.edit-assignment {
+    width: 750px;
+    margin-top: 10px;
+    margin-bottom:20px;
+}
+
+.assignment-name {
+    margin-bottom: 10px;
+}
+
+.btn-danger {
+    
+    margin-left: 600px;
+    margin-right: 10px;
+    color: black;
+    background-color: lightgray;
+    border:none;
+}
+.btn-success {
+    
+    background-color: red;
+    border:none;
+}
+
+.a-line {
+    width:750px;
+}
+
+.published-a {
+    color: green;
+    margin-left:570px;
+    
+}
+
+
+.ellipse-assignment-a {
+    margin-left:20px;
+    background-color: lightgray;
+}

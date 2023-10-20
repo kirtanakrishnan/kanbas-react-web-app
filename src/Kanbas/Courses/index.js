@@ -9,9 +9,13 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 function Courses() {
   const { courseId } = useParams();
   const course = db.courses.find((course) => course._id === courseId);
+  // if (!course) {
+  //   // Handle the case where the course is not found
+  //   return <div>Course not found</div>;
+  // }
   return (
     <div>
-      <h1>Course {course.name}</h1>
+      
       <CourseNavigation />
       <div>
         <div
@@ -22,8 +26,10 @@ function Courses() {
           }}
         >
           <Routes>
-            <Route path="/" element={<Navigate to="Home" />} />
-            <Route path="Home" element={<Home/>} />
+            <Route path="/" element={<Navigate to="RS101/Home" />} />
+            {/* <Route path="Home" element={<Home/>} /> */}
+            <Route path="/RS101/Home" element={<Home/>} />
+            <Route path="Home" element={<Home/>}/>
             <Route path="Modules" element={<Modules/>} />
             <Route path="Assignments" element={<Assignments/>} />
             <Route

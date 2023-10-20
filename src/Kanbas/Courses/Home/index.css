@@ -1,0 +1,72 @@
+.student {
+    margin-left: 900px;
+    width: 175px;
+    margin-top: 10px;
+    position: absolute;
+    background-color: lightgray;
+
+}
+.fa-glasses {
+    margin-right: 10px;
+}
+.main-home {
+  
+    
+   
+     width: 750px;
+     
+     
+ }
+
+
+
+.fa-grip-vertical {
+    margin-right: 10px;
+}
+.course {
+    background-color: lightgrey;
+    margin-right: 5px;
+    width: 150px;
+}
+
+
+.home-select {
+    width: 200px;
+    /*margin-right: 40px;*/
+    background-color: lightgray;
+    margin-left: 0px;
+    margin-right: 0px;
+   
+}
+
+.head-line {
+    margin-top: 120px;
+    width: 1075px;
+    margin-left:none;
+   
+    /*position:absolute;*/
+}
+
+
+.head {
+    /*margin-left:105px;
+    position:absolute;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+}
+
+.module {
+    background-color: red;
+    color: white;
+    margin: 5px;
+}
+
+.ellipse {
+    background-color: lightgray;
+    height: 38px;
+   
+}
+.fa-glasses {
+    margin-right: 10px;
+}

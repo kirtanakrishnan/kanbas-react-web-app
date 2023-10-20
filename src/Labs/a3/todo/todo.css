@@ -1,0 +1,12 @@
+.list-group-todo {
+    width: 500px;
+    
+    margin-bottom:10px;
+
+}
+.list-group-item-todo {
+    background-color:none;
+    border: 1px;
+    width: 500px;
+
+}

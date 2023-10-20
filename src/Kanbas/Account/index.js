@@ -3,7 +3,7 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./profileNavigation.css";
 import KanbasNavigation from "../KanbasNavigation";
-import Profile from "./profile";
+
 
 function AccountNavigation() {
   const links = [
