@@ -69,6 +69,12 @@
     background-color: lightgray;
     height: 38px;
    
+   
+}
+
+.ellipse-a {
+    margin-left: 10px;
+   
 }
 
 .head-line-assignment {
@@ -101,10 +107,12 @@
     margin-left: 10px;
 }
 
-.check-a {
-    margin-right: 10px;
-}
+
 
 .multiple {
     color:red;
+}
+
+.delete-assignment {
+    margin-right: 20px;
 }

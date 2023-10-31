@@ -1,28 +1,45 @@
-import React from "react";
+import {React, useState} from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import CourseNavigation from "../CourseNavigation";
 import "./assignments.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Route, Routes } from "react-router";
+import AssignmentEditor from "./AssignmentEditor";
 import { faGlasses, faPlus, faEllipsisVertical, faFile, faGripVertical, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  deleteAssignment,
+  
+} from "./assignmentsReducer";
+
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId
-  );
+  // const assignments = db.assignments;
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
+
+  
+
+  const handleDeleteClick = (assignmentId) => {
+    const confirmation = window.confirm("Are you sure you want to remove the assignment?");
+
+    if (confirmation) {
+      // User confirmed deletion
+      dispatch(deleteAssignment(assignmentId));
+    }
+  };
+
+ 
 
   return (
     <div className="container-fluid">
       <CourseNavigation />
       <div className="row">
         <div className="col-md-2 col-lg-2 col-sm-0 col-xl-5 col-xxl-5 main-home flex-column">
-          {/* <button type="button" className="btn student-assignment">
-            <FontAwesomeIcon icon={faGlasses} style={{ color: "#3e4147" }} />
-            Student View
-          </button> */}
+          
           <p></p>
           <div className="d-flex float-start align-items-center search">
             <textarea
@@ -37,10 +54,13 @@ function Assignments() {
               <FontAwesomeIcon icon={faPlus} style={{ color: "#484d56" }} />
               Group
             </button>
-            <button type="button" className="btn module-assignment">
+
+            
+            <Link to={`/Kanbas/Courses/${courseId}/Assignments/`} className="btn module-assignment">
               <FontAwesomeIcon icon={faPlus} style={{ color: "white" }} />
               Assignment
-            </button>
+            </Link>
+
             <button type="button" className="btn ellipse-assignment">
               <FontAwesomeIcon icon={faEllipsisVertical} style={{ color: "#989aa0" }} />
             </button>
@@ -66,28 +86,42 @@ function Assignments() {
                 </div>
               </div>
             </li>
-            {courseAssignments.map((assignment) => (
+            {assignments.map((assignment) => (
               <li className="list-group-item sub-item-a" key={assignment._id}>
                 <div className="d-flex justify-content-between align-items-center">
                   <div>
+                  
                     <FontAwesomeIcon icon={faGripVertical} style={{ color: "#5a5d63" }} />
                     <FontAwesomeIcon icon={faFile} style={{ color: "#186825" }} />
-                    <span>
-                      <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
+                    
+                    <span >
+                      <Link to={`/Kanbas/Courses/${courseId}/Assignments/`}>
                         {assignment.title}
                       </Link>
                     </span>
+                   
                     <br />
-                    <span className="sub-text">{assignment.week}</span>
+                    <span className="sub-text">{assignment.week}</span><br/>
+                    <span className="sub-text">{assignment.description}</span>
                     <br />
                     <span className="sub-text">
                       <text className="multiple">Multiple Modules | </text>
-                      {`Due ${assignment.dueDate} | ${assignment.points} pts`}</span>
+                      {`Due ${assignment.dueDate} | ${assignment.points} pts | Available From ${assignment.availableFromDate} 
+                      | Available Until ${assignment.availableUntilDate}`}</span>
                   </div>
-                  <div>
-                    <FontAwesomeIcon icon={faCircleCheck} className="check-a"style={{ color: "#067a23" }} />
-                    <FontAwesomeIcon icon={faEllipsisVertical} style={{ color: "#989aa0" }} />
-                  </div>
+                  
+                  <button
+                  className="delete-assignment"
+                  onClick={() => handleDeleteClick(assignment._id)} >
+                    Delete
+                    </button>
+                     
+                     
+
+
+                  <FontAwesomeIcon icon={faCircleCheck} className="check-a"style={{ color: "#067a23" }} />
+                  <FontAwesomeIcon icon={faEllipsisVertical} className="ellipse-a"style={{ color: "#989aa0" }} />
+                  
                 </div>
               </li>
             ))}

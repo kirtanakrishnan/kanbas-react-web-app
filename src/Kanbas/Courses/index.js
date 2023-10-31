@@ -13,6 +13,7 @@ function Courses() {
   //   // Handle the case where the course is not found
   //   return <div>Course not found</div>;
   // }
+  
   return (
     <div>
       
@@ -31,11 +32,16 @@ function Courses() {
             <Route path="/RS101/Home" element={<Home/>} />
             <Route path="Home" element={<Home/>}/>
             <Route path="Modules" element={<Modules/>} />
-            <Route path="Assignments" element={<Assignments/>} />
+            <Route path="Assignments/" element={<Assignments/>} />
             <Route
-              path="Assignments/:assignmentId"
+              path="/Assignments/:assignmentId/*"
               element={<AssignmentEditor/>}
             />
+            <Route
+              path="/Kanbas/Courses/:courseId/Assignments/"
+              element={<AssignmentEditor/>}
+            />
+           
             <Route path="Grades" element={<h1>Grades</h1>} />
           </Routes>
         </div>

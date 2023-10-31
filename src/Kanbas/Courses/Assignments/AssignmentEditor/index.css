@@ -37,3 +37,27 @@
     margin-left:20px;
     background-color: lightgray;
 }
+
+.input-points {
+    width: 200px;
+}
+
+.assign-to {
+    width: 300px;
+}
+
+.due {
+    width: 300px;
+}
+
+.available-from {
+    width: 300px;
+}
+.until {
+    width: 300px;
+}
+
+.assignment-description {
+    width: 750px;
+    height: 100px;
+}
