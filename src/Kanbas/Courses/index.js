@@ -38,8 +38,8 @@ function Courses() {
               element={<AssignmentEditor/>}
             />
             <Route
-              path="/Kanbas/Courses/:courseId/Assignments/"
-              element={<AssignmentEditor/>}
+              path="/Kanbas/Courses/:courseId/Assignments/New"
+              element={<AssignmentEditor />}
             />
            
             <Route path="Grades" element={<h1>Grades</h1>} />

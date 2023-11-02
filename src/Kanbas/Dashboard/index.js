@@ -34,22 +34,25 @@ function Dashboard(
       
       <div className="row row-dashboard flex-row flex-wrap d-flex">
       <h5>Course</h5>
-      <input value={course.name} className="form-control"
+      <input value={course.name} className="form-control new-course"
              onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
-      <input value={course.number} className="form-control"
+      <input value={course.number} className="form-control new-course"
              onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
-      <input value={course.startDate} className="form-control" type="date"
+      <input value={course.startDate} className="form-control new-course" type="date"
              onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
-      <input value={course.endDate} className="form-control" type="date"
+      <input value={course.endDate} className="form-control new-course" type="date"
              onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
 
 
-      <button onClick={addNewCourse} >
+<div>
+<button onClick={addNewCourse} className="add-course">
         Add
       </button>
-      <button onClick={updateCourse} >
+      <button onClick={updateCourse} className="update-course">
         Update
       </button>
+</div>
+      
 
         {courses.map((course) => (
           <div key={course._id} className="col-12 col-md-6 col-xl-3">
@@ -62,7 +65,7 @@ function Dashboard(
                 <Link to={`/Kanbas/Courses/${course._id}`} className="btn btn-primary go-to-home">
                   Go to course
                 </Link>
-                <button
+                <button className="edit-course"
               onClick={(event) => {
                 event.preventDefault();
                 setCourse(course);
@@ -70,7 +73,7 @@ function Dashboard(
               Edit
             </button>
 
-                <button
+                <button className="delete-course"
               onClick={(event) => {
                 event.preventDefault();
                 deleteCourse(course._id);

@@ -4,7 +4,7 @@ import db from "../../../Database";
 import "./index.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import { setAssignment, updateAssignment } from "../assignmentsReducer";
+import { addAssignment, updateAssignment } from "../assignmentsReducer";
 import { useSelector, useDispatch } from "react-redux";
 
 function AssignmentEditor() {
@@ -12,8 +12,35 @@ function AssignmentEditor() {
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   let assignment = useSelector((state) => state.assignmentsReducer.assignment);
 
-  assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId);
+  
+  // _id: "",
+  // title: "",
+  // course: "",
+  // week: "",
+  // description: "",
+  // dueDate: "",
+  // availableFromDate: "",
+  // availableUntilDate: "",
+  // points: 0,
+    // Initialize the assignment based on whether it's new or not
+    assignment = assignmentId === "New" ? {
+      _id: "",
+      title: "New Assignment Title",
+      course: "",
+      week: "",
+      description: "New Assignment Description",
+      dueDate: "",
+      availableFromDate: "",
+      availableUntilDate: "",
+      points: 100,
+    } : assignments.find(assignment => assignment._id === assignmentId);
+  
+    // const [assignment, setAssignment] = useState(initialAssignment);
+
+  //  assignment = db.assignments.find(
+  // (assignment) => assignment._id === assignmentId);
+
+  
   
   let aID = assignment._id;
   // let aTitle = assignment.title;
@@ -21,14 +48,16 @@ function AssignmentEditor() {
   let aWeek = assignment.week;
   // let aDescription = assignment.description;
   // let aDueDate = assignment.dueDate;
-  let aAvailableFromDate = assignment.availableFromDate;
-  let aAvailableUntilDate = assignment.availableUntilDate;
+  // let aAvailableFromDate = assignment.availableFromDate;
+ // let aAvailableUntilDate = assignment.availableUntilDate;
   let aPoints = assignment.points;
  
 
   const[title, setTitle] = useState(assignment.title);
   const[description, setDescription] = useState(assignment.description);
   const[dueDate, setDueDate] = useState(assignment.dueDate);
+  const[availableFromDate, setAvailableFromDate] = useState(assignment.availableFromDate);
+  const[availableUntilDate, setAvailableUntilDate] = useState(assignment.availableUntilDate);
   // console.log(assignment);
 
   
@@ -57,14 +86,38 @@ function AssignmentEditor() {
   const dueDateChangeHandler = (event) => {
     setDueDate(event.target.value);
   }
+
+  const availableFromChangeHandler = (event) => {
+    setAvailableFromDate(event.target.value);
+  }
+
+  const availableUntilChangeHandler = (event) => {
+    setAvailableUntilDate(event.target.value);
+  }
  
   const handleSave = () => {
+    if (assignment._id === "") {
+      // If it's a new assignment, add it
+      const newAssignment = {
+        '_id':aID, title, 'course':aCourse, 
+        'week':aWeek, description, dueDate, 
+        availableFromDate, availableUntilDate, 'points':aPoints
+        
+      };
+      console.log(newAssignment);
+  
+      // Dispatch an action to add the new assignment to the state using the addAssignment action creator
+      dispatch(addAssignment(newAssignment));
+    } else {
     const editedAssignment = {
-      '_id':aID, title, 'course':aCourse, 'week':aWeek, description, dueDate, aAvailableFromDate, aAvailableUntilDate, 'points':aPoints
+      '_id':aID, title, 'course':aCourse, 'week':aWeek, 
+      description, dueDate, availableFromDate, 
+      availableUntilDate, 'points':aPoints
     }
     console.log(editedAssignment);
     dispatch(updateAssignment(editedAssignment));
     console.log("Actually saving assignment TBD in later assignments");
+  }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
 
@@ -122,7 +175,7 @@ function AssignmentEditor() {
                   <label for="inputPassword6" class="col-form-label">Available from</label>
                 </div>
                 <div class="col-auto">
-                  <input placeholder="assignment" type="date" id="inputPassword6" class="form-control available-input" aria-describedby="passwordHelpInline"/>
+                  <input placeholder="assignment" type="date" id="inputPassword6" onChange={availableFromChangeHandler} value={availableFromDate} class="form-control available-input" aria-describedby="passwordHelpInline"/>
                 </div>
                 
               </div>
@@ -132,7 +185,7 @@ function AssignmentEditor() {
                   <label for="inputPassword6" class="col-form-label">Until</label>
                 </div>
                 <div class="col-auto">
-                  <input placeholder="assignment" type="date" id="inputPassword6" onChange={dueDateChangeHandler} value={dueDate} class="form-control until-input" aria-describedby="passwordHelpInline"/>
+                  <input placeholder="assignment" type="date" id="inputPassword6" onChange={availableUntilChangeHandler} value={availableUntilDate} class="form-control until-input" aria-describedby="passwordHelpInline"/>
                 </div>
                 
               </div>

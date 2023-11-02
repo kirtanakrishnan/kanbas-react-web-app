@@ -25,34 +25,31 @@ function ModuleList() {
   return (
     <ul className="list-group list-group-home">
       <li className="list-group-home list-group-item">
-        <button  onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-        <button onClick={() => dispatch(updateModule(module))}>
-                Update
-        </button>
+        
 
-        <input
+        <input className="input-module"
           value={module.name}
           onChange={(e) =>
             dispatch(setModule({ ...module, name: e.target.value }))
           }/>
-        <textarea
+        
+          <button className="add-module" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
+        <button className="update-module" onClick={() => dispatch(updateModule(module))}>
+                Update
+        </button>
+        <div>
+        <textarea className="text-module"
           value={module.description}
           onChange={(e) =>
             dispatch(setModule({ ...module, description: e.target.value }))
           }/>
+        </div>
+        
       </li>
 
       {modules.map((module, index) => (
         <li key={index} className="list-group-item list-group-item-secondary" aria-current="true">
-          <button
-              onClick={() => dispatch(setModule(module))}>
-              Edit
-            </button>
-
-          <button
-             onClick={() => dispatch(deleteModule(module._id))}>
-              Delete
-            </button>
+          
 
           <div className="d-flex justify-content-between align-items-center">
             <div>
@@ -62,6 +59,15 @@ function ModuleList() {
               <span>{module.description}</span>
             </div>
             <div>
+            <button className="edit-module"
+              onClick={() => dispatch(setModule(module))}>
+              Edit
+            </button>
+
+          <button className="delete-module"
+             onClick={() => dispatch(deleteModule(module._id))}>
+              Delete
+            </button>
             <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#067a23" }}className = "fa-circle-check" />
               <FontAwesomeIcon icon={faPlus} style={{ color: "#2c313a" }}className = "fa-plus" />
               <FontAwesomeIcon icon={faEllipsisVertical} className = "fa-ellipsis-vertical" style={{ color: "#989aa0" }} />

@@ -56,7 +56,7 @@ function Assignments() {
             </button>
 
             
-            <Link to={`/Kanbas/Courses/${courseId}/Assignments/`} className="btn module-assignment">
+            <Link to={`/Kanbas/Courses/${courseId}/Assignments/New`} className="btn module-assignment">
               <FontAwesomeIcon icon={faPlus} style={{ color: "white" }} />
               Assignment
             </Link>
@@ -95,7 +95,7 @@ function Assignments() {
                     <FontAwesomeIcon icon={faFile} style={{ color: "#186825" }} />
                     
                     <span >
-                      <Link to={`/Kanbas/Courses/${courseId}/Assignments/`}>
+                      <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
                         {assignment.title}
                       </Link>
                     </span>
