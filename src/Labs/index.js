@@ -4,6 +4,7 @@ import Kanbas from "../Kanbas";
 import {Link} from "react-router-dom";
 import Nav from "../Nav";
 import Assignment4 from "./a4";
+import Assignment5 from "./a5";
 import {Routes, Route, Navigate}
   from "react-router";
   import store from "./store";
@@ -24,6 +25,8 @@ function Labs() {
         element={<Assignment3/>}/>
        <Route path="a4"
         element={<Assignment4/>}/>
+        <Route path="a5"
+        element={<Assignment5/>}/>
      </Routes>
       </div>
     </Provider>
