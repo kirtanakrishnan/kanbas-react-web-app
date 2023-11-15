@@ -36,7 +36,7 @@ function Kanbas() {
   }, []);
 
 
-  const updateCourse = async (course) => {
+  const updateCourse = async () => {
     console.log(course._id);
     const response = await axios.put(
       `${URL}/${course._id}`,
@@ -44,14 +44,14 @@ function Kanbas() {
     );
     setCourses(
       courses.map((c) => {
-        if (c._id === course._id) {
+        if (c._id.toString() === course._id.toString()) {
           return response.data;
         }
         return c;
       })
     );
     console.log(response);
-    setCourse({ name: courses.name });
+    setCourse({ name: "" });
   };
 
   const addNewCourse = async () => {

@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React, useEffect, useState} from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import CourseNavigation from "../CourseNavigation";
@@ -10,8 +10,11 @@ import { faGlasses, faPlus, faEllipsisVertical, faFile, faGripVertical, faCircle
 import { useSelector, useDispatch } from "react-redux";
 import {
   deleteAssignment,
+  setAssignments
   
 } from "./assignmentsReducer";
+import { findAssignmentsForCourse } from "./service";
+import * as service from "./service";
 
 
 function Assignments() {
@@ -21,7 +24,23 @@ function Assignments() {
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
 
-  
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+    );
+  }, [courseId]);
+
+  const handleDeleteAssignment = (assignmentId) => {
+    const confirmation = window.confirm("Are you sure you want to remove the assignment?");
+    if (confirmation) {
+      service.deleteAssignment(assignmentId).then((status) => {
+        dispatch(deleteAssignment(assignmentId));
+      });
+    }
+
+    
+  };
 
   const handleDeleteClick = (assignmentId) => {
     const confirmation = window.confirm("Are you sure you want to remove the assignment?");
@@ -112,7 +131,7 @@ function Assignments() {
                   
                   <button
                   className="delete-assignment"
-                  onClick={() => handleDeleteClick(assignment._id)} >
+                  onClick={() => handleDeleteAssignment(assignment._id)} >
                     Delete
                     </button>
                      

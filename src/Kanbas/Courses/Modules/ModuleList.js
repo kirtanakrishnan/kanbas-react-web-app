@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "./home.css";
@@ -10,7 +10,11 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules
 } from "./modulesReducer";
+import * as client from "./client";
+import { findModulesForCourse, createModule } from "./client";
+
 
 function ModuleList() {
   const { courseId } = useParams();
@@ -18,6 +22,28 @@ function ModuleList() {
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
 
 
   // const modules = db.modules.filter((module) => module.course === courseId);
@@ -33,8 +59,8 @@ function ModuleList() {
             dispatch(setModule({ ...module, name: e.target.value }))
           }/>
         
-          <button className="add-module" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-        <button className="update-module" onClick={() => dispatch(updateModule(module))}>
+          <button className="add-module" onClick={handleAddModule}>Add</button>
+        <button className="update-module" onClick={handleUpdateModule}>
                 Update
         </button>
         <div>
@@ -65,7 +91,7 @@ function ModuleList() {
             </button>
 
           <button className="delete-module"
-             onClick={() => dispatch(deleteModule(module._id))}>
+             onClick={() => handleDeleteModule(module._id)}>
               Delete
             </button>
             <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#067a23" }}className = "fa-circle-check" />

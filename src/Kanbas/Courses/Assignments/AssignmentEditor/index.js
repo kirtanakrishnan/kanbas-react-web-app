@@ -6,22 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { addAssignment, updateAssignment } from "../assignmentsReducer";
 import { useSelector, useDispatch } from "react-redux";
+import { createAssignment } from "../service";
+import * as service from "../service";
+
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   let assignment = useSelector((state) => state.assignmentsReducer.assignment);
 
-  
-  // _id: "",
-  // title: "",
-  // course: "",
-  // week: "",
-  // description: "",
-  // dueDate: "",
-  // availableFromDate: "",
-  // availableUntilDate: "",
-  // points: 0,
     // Initialize the assignment based on whether it's new or not
     assignment = assignmentId === "New" ? {
       _id: "",
@@ -35,21 +28,14 @@ function AssignmentEditor() {
       points: 100,
     } : assignments.find(assignment => assignment._id === assignmentId);
   
-    // const [assignment, setAssignment] = useState(initialAssignment);
-
-  //  assignment = db.assignments.find(
-  // (assignment) => assignment._id === assignmentId);
-
+    
   
   
   let aID = assignment._id;
-  // let aTitle = assignment.title;
+  
   let aCourse = assignment.course;
   let aWeek = assignment.week;
-  // let aDescription = assignment.description;
-  // let aDueDate = assignment.dueDate;
-  // let aAvailableFromDate = assignment.availableFromDate;
- // let aAvailableUntilDate = assignment.availableUntilDate;
+
   let aPoints = assignment.points;
  
 
@@ -58,17 +44,6 @@ function AssignmentEditor() {
   const[dueDate, setDueDate] = useState(assignment.dueDate);
   const[availableFromDate, setAvailableFromDate] = useState(assignment.availableFromDate);
   const[availableUntilDate, setAvailableUntilDate] = useState(assignment.availableUntilDate);
-  // console.log(assignment);
-
-  
-
-    // const [editedAssignment] = useState({ ...assignment });
-
-  
-  // const handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   dispatch(setAssignment({ ...editedAssignment, [name]: value }));
-  // };
 
 
   const { courseId } = useParams();
@@ -94,6 +69,12 @@ function AssignmentEditor() {
   const availableUntilChangeHandler = (event) => {
     setAvailableUntilDate(event.target.value);
   }
+
+  // const handleAddAssignment = () => {
+  //   createAssignment(courseId, newAssignment).then((newAssignment) => {
+  //     dispatch(addAssignment(newAssignment));
+  //   });
+  // };
  
   const handleSave = () => {
     if (assignment._id === "") {
@@ -105,9 +86,13 @@ function AssignmentEditor() {
         
       };
       console.log(newAssignment);
+
+      createAssignment(courseId, newAssignment).then((newAssignment) => {
+        dispatch(addAssignment(newAssignment));
+      });
   
       // Dispatch an action to add the new assignment to the state using the addAssignment action creator
-      dispatch(addAssignment(newAssignment));
+      // dispatch(addAssignment(newAssignment));
     } else {
     const editedAssignment = {
       '_id':aID, title, 'course':aCourse, 'week':aWeek, 
@@ -115,10 +100,17 @@ function AssignmentEditor() {
       availableUntilDate, 'points':aPoints
     }
     console.log(editedAssignment);
-    dispatch(updateAssignment(editedAssignment));
+   
+    handleUpdateAssignment(editedAssignment);
+    // dispatch(updateAssignment(editedAssignment));
     console.log("Actually saving assignment TBD in later assignments");
   }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  };
+
+  const handleUpdateAssignment = async (editedAssignment) => {
+    const status = await service.updateAssignment(editedAssignment);
+    dispatch(updateAssignment(editedAssignment));
   };
 
   return (
