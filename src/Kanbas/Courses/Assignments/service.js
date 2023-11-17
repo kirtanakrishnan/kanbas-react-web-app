@@ -3,8 +3,7 @@ const API_BASE = process.env.REACT_APP_API_BASE;
 console.log(API_BASE);
 const COURSES_URL = `${API_BASE}/courses`;
 const ASSIGNMENTS_URL = `${API_BASE}/courses`;
-// const COURSES_URL = "http://localhost:4000/api/courses";
-// const ASSIGNMENTS_URL = "http://localhost:4000/api/assignments";
+
 
 export const findAssignmentsForCourse = async (courseId) => {
     const response = await axios

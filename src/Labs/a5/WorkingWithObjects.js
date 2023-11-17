@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function WorkingWithObjects() {
-  const URL = "http://localhost:4000/a5/assignment";
+
+  const URL = "https://kanbas-node-server-app-a1dt.onrender.com/a5/assignment";
   const [assignment, setAssignment] = useState({
     id: 1,
     title: "NodeJS Assignment",
@@ -88,7 +89,7 @@ function WorkingWithObjects() {
 
       <h4>Retrieving Properties</h4>
       <a
-        href="http://localhost:4000/a5/assignment/title"
+        href="https://kanbas-node-server-app-a1dt.onrender.com/a5/assignment/title"
         className="btn btn-primary me-2"
       >
         Get Title
@@ -96,7 +97,7 @@ function WorkingWithObjects() {
 
       <h4>Retrieving Objects</h4>
       <a
-        href="http://localhost:4000/a5/assignment"
+        href="https://kanbas-node-server-app-a1dt.onrender.com/a5/assignment"
         className="btn btn-primary me-2"
       >
         Get Assignment
