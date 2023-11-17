@@ -4,7 +4,7 @@ import './index.css'
 
 function EncodingParametersInURLs() {
 
-  const API = "https://kanbas-node-server-app-a1dt.onrender.com/"
+  const API = "https://kanbas-node-server-app-a1dt.onrender.com"
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [result, setResult] = useState(0);
