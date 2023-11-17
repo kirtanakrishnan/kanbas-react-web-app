@@ -206,7 +206,7 @@ function WorkingWithArrays() {
           Get Todos
         </a>
         <h4>Retrieving an Item from an Array by ID</h4>
-      <input
+        <input
         className="form-control"
         value={todo.id}
         onChange={(e) => setTodo({ ...todo,
@@ -215,11 +215,25 @@ function WorkingWithArrays() {
          className="btn btn-primary me-2">
         Get Todo by ID
       </a>
+      {/* <input
+        className="form-control"
+        value={todo.id}
+        onChange={(e) => setTodo({ ...todo,
+          id: e.target.value })}/>
+      <a href={`${API}/${todo.id}`}
+         className="btn btn-primary me-2">
+        Get Todo by ID
+      </a> */}
       <h3>Filtering Array Items</h3>
-  <a href={`${API}/${todo.id}?completed=true`}
+  {/* <a href={`${API}/${todo.id}?completed=true`}
+     className="btn btn-primary me-2" >
+    Get Completed Todos
+  </a> */}
+   <a href={`${API}?completed=true`}
      className="btn btn-primary me-2" >
     Get Completed Todos
   </a>
+
   <h4>Creating new Items in an Array</h4>
   <a href={`${API}/create`}
      className="btn btn-primary me-2">
