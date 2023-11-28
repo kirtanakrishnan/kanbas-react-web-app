@@ -32,7 +32,7 @@ function AccountNavigation() {
             }`}
             key={index}
           >
-            <Link to={`/Kanbas/Account/${link.name}`} className="list-group-item-link">
+            <Link to={`/Kanbas/Profile/${link.name}`} className="list-group-item-link">
               
               <span>{link.name}</span>
             </Link>

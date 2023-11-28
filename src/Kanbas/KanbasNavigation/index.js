@@ -7,7 +7,7 @@ import { faUser, faGaugeHigh, faBook, faCalendarDays, faInbox, faClock, faTv, fa
 
 function KanbasNavigation() {
     const links = [
-      { name: "Account", icon: faUser, iconColor: "lightgray" },
+      { name: "Profile", icon: faUser, iconColor: "lightgray" },
       { name: "Dashboard", icon: faGaugeHigh, iconColor: "red" },
       { name: "Courses", icon: faBook, iconColor: "red" },
       { name: "Calendar", icon: faCalendarDays, iconColor: "red" },

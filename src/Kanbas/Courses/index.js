@@ -13,7 +13,8 @@ function Courses() {
   const { courseId } = useParams();
 
   const [course, setCourse] = useState({});
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000/api";
+  console.log(API_BASE);
   const URL = `${API_BASE}/courses`
 
   const findCourseById = async (courseId) => {
