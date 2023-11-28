@@ -1,5 +1,5 @@
 import KanbasNavigation from "./KanbasNavigation";
-import {BrowserRouter, Link} from "react-router-dom";
+import {BrowserRouter, Link } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import AccountNavigation from "./Account";
