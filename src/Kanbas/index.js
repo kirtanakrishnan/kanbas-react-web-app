@@ -17,6 +17,7 @@ import Account from "../users/account";
 import Nav from "../Nav";
 import UserTable from "../users/table";
 import Signup from "../users/signup";
+import MongoNav from "./mongoNav";
 
 
 import axios from "axios";
@@ -95,6 +96,10 @@ function Kanbas() {
           <KanbasNavigation/>
       
       <div>
+
+      <div>
+        <MongoNav/>
+      </div>
        
        
         <Routes>
