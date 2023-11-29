@@ -32,6 +32,8 @@ function Kanbas() {
   const [courses, setCourses] = useState([]);
 
   const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000/api";
+  
+  // || "https://kanbas-node-server-app-a6-t20f.onrender.com/api"
   const URL = `${API_BASE}/courses`
   
 

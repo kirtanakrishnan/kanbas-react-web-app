@@ -14,6 +14,7 @@ function Courses() {
 
   const [course, setCourse] = useState({});
   const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000/api";
+  // || "https://kanbas-node-server-app-a6-t20f.onrender.com/api"
   console.log(API_BASE);
   const URL = `${API_BASE}/courses`
 
