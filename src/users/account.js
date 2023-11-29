@@ -4,7 +4,7 @@ import { useNavigate, useParams} from "react-router-dom";
 import "./usersAccount.css"
 import { Link } from "react-router-dom";
 
-//
+
 function Account() {
   const { id } = useParams();
   const [account, setAccount] = useState(null);
