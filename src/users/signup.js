@@ -16,7 +16,7 @@ function Signup() {
     }
   };
   return (
-    <div>
+    <div className="signin">
       <h1>Signup</h1>
       {error && <div>{error}</div>}
       <input
